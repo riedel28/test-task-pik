@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
 class Form extends Component {
   constructor() {
@@ -23,8 +24,8 @@ class Form extends Component {
         <input type="email" name="email" />
         <input type="text" name="birthdate" />
         <input type="text" name="message" />
-        <button>Очистить</button>
-        <button>Отправить</button>
+        <Button>Очистить</Button>
+        <Button>Отправить</Button>
       </form>
     );
   }
