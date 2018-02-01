@@ -4,14 +4,30 @@ body {
   font-family: sans-serif;
 }
 .app {
-  background-color: aquamarine;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f3f3f3;
 }
 form {
-  border: 1px solid black;
+  padding: 35px 40px;
   width: 300px;
+  background-color: #ffffff;
+}
+.form-title {
+  padding: 0;
+  margin: 0;
+  font-size: 26px;
+  line-height: 33px;
+  color: #333333;
+}
+.form-subtitle {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #8f8f8f;
 }
