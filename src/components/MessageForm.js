@@ -17,7 +17,7 @@ class MessageForm extends Component {
         <Field label="Имя" type="text" name="name" component="input" />
         <Field label="Email" type="email" name="email" component="input" />
         <Field label="Дата рождения" type="text" name="birthdate" component="input" />
-        <Field label="Сообщение" type="text" name="mesage" component="input" />
+        <Field label="Сообщение" type="text" name="message" component="input" />
         <Button>Очистить</Button>
         <Button type="submit">Отправить</Button>
       </form>

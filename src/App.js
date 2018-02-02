@@ -1,5 +1,5 @@
 import React from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import './css/index.css';
 
 import MessageForm from './components/MessageForm';
@@ -10,8 +10,8 @@ const App = () => (
   </div>
 );
 
-// const mapStateToProps = state => ({
-//   form: state.form,
-// });
+const mapStateToProps = state => ({
+  form: state.form,
+});
 
-export default App;
+export default connect(mapStateToProps)(App);
