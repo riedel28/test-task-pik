@@ -1,12 +1,17 @@
 import React from 'react';
+// import { connect } from 'react-redux';
 import './css/index.css';
 
-import Form from './components/Form';
+import MessageForm from './components/MessageForm';
 
 const App = () => (
   <div className="app">
-    <Form />
+    <MessageForm />
   </div>
 );
+
+// const mapStateToProps = state => ({
+//   form: state.form,
+// });
 
 export default App;
