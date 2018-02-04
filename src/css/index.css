@@ -31,3 +31,6 @@ form {
   line-height: 16px;
   color: #8f8f8f;
 }
+.input-name {
+  border: 3px solid black;
+}
