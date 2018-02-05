@@ -2,21 +2,6 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Button from './Button';
 
-// const isYearValid = dateString => {
-//   const year = Number(dateString.slice(6, 10));
-//   const yearToMilliseconds = Date.parse(year);
-
-//   const startYear = Date.parse(1900);
-
-//   const now = Date.now();
-
-//   if (yearToMilliseconds > startYear && yearToMilliseconds < now) {
-//     return true;
-//   }
-
-//   return false;
-// };
-
 const isCreditAllowed = num => {
   const year = Number(num.slice(6, 10));
 
@@ -36,7 +21,6 @@ const isCreditAllowed = num => {
 const submitValues = values => {
   console.log(values);
 
-  // console.log(isYearValid(values.birthdate));
   console.log(isCreditAllowed(values.birthdate));
 };
 
@@ -69,14 +53,20 @@ const validate = values => {
 };
 
 const renderField = ({
-  input, type, label, meta: { touched, error, warning },
+  input,
+  type,
+  label,
+  placeholder,
+  meta: {
+    touched, error, warning, dirty,
+  },
 }) => (
-  <div>
-    <div>
-      <label>{label}</label>
-      <input {...input} type={type} />
-      {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-    </div>
+  <div className="input-field">
+    {dirty && <label className="show">{label}</label>}
+    <input {...input} type={type} placeholder={placeholder} />
+    {touched &&
+      ((error && <span className="error show">{error}</span>) ||
+        (warning && <span className="error show">{warning}</span>))}
   </div>
 );
 
@@ -104,10 +94,10 @@ const MessageForm = props => {
         component={renderField}
         placeholder="Сообщение"
       />
-      <Button type="button" onClick={reset} disabled={pristine}>
+      <Button className="btn btn-clear" type="button" onClick={reset} disabled={pristine}>
         Очистить
       </Button>
-      <Button type="submit" disabled={pristine || submitting}>
+      <Button className="btn" type="submit" disabled={pristine || submitting}>
         Отправить
       </Button>
     </form>

@@ -1,9 +1,86 @@
 form {
+  margin: 10vh 0;
   padding: 35px 40px;
-  width: 300px;
+  width: 335px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  text-align: center;
+}
+
+.input-field {
+  position: relative;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+label {
+  position: absolute;
+  opacity: 0;
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #8f8f8f;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 6px 0;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid #4285f4;
+}
+
+input:invalid {
+  border-bottom: 1px solid #ff4242;
+}
+
+::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+
+.error {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ff4242;
+  // opacity: 0;
+}
+
+.show {
+  opacity: 1;
 }
 
 .form-title {
@@ -17,8 +94,47 @@ form {
 .form-subtitle {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   font-size: 13px;
   line-height: 16px;
   color: #8f8f8f;
+}
+
+.btn {
+  margin: 20px 0 0;
+  padding: 14px 64px;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fafafa;
+  background-color: #4285f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  color: rgba(250, 250, 250, 0.5);
+}
+
+.btn:hover {
+  background-color: #3874d7;
+}
+
+.btn-clear {
+  background-color: #ffffff;
+  border: 0;
+  color: rgba(38, 38, 38, 0.5);
+}
+
+.btn-clear:disabled {
+  background-color: #ffffff;
+  border: 0;
+  color: rgba(38, 38, 38, 0.5);
+}
+
+.btn-clear:hover {
+  background-color: #e0e0e0;
+  border: 0;
+  color: rgba(38, 38, 38, 0.5);
 }

@@ -28,6 +28,11 @@
   src: local('Proba Pro'), url(../../fonts/proba_pro_semibold-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_semibold-webfont.ttf) format('ttf');
   font-weight: 600;
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -35,18 +40,85 @@ body {
 }
 .app {
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f3f3f3;
 }
 form {
+  margin: 10vh 0;
   padding: 35px 40px;
-  width: 300px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  text-align: center;
+}
+.input-field {
+  margin: 0 0 30px 0;
+  text-align: left;
+  position: relative;
+}
+label {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #8f8f8f;
+  text-align: left;
+  position: absolute;
+  opacity: 0;
+  top: -16px;
+  left: 0;
+}
+input {
+  width: 100%;
+  padding: 6px 0;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  outline: none;
+}
+input:focus {
+  border-bottom: 1px solid #4285f4;
+}
+input:invalid {
+  border-bottom: 1px solid #ff4242;
+}
+::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 18px;
+  line-height: 22px;
+  color: #8f8f8f;
+}
+.error {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ff4242;
+  opacity: 0;
+}
+.show {
+  opacity: 1;
 }
 .form-title {
   padding: 0;
@@ -62,4 +134,27 @@ form {
   font-size: 13px;
   line-height: 16px;
   color: #8f8f8f;
+}
+.btn {
+  margin: 20px 0 0;
+  padding: 14px 64px;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fafafa;
+  background-color: #4285f4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:disabled {
+  color: rgba(250, 250, 250, 0.5);
+}
+.btn:hover {
+  background-color: #3874d7;
+}
+.btn-clear {
+  background-color: #e0e0e0;
+  border: 0;
+  color: rgba(38, 38, 38, 0.5);
 }
