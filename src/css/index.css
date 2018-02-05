@@ -1,7 +1,37 @@
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_regular-webfont.woff) format('woff'), url(../../fonts/proba_pro_regular-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_regular-webfont.eot) format('eot'), url(../../fonts/proba_pro_regular-webfont.ttf) format('ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_thin-webfont.woff) format('woff'), url(../../fonts/proba_pro_thin-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_thin-webfont.eot) format('eot'), url(../../fonts/proba_pro_thin-webfont.ttf) format('ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_extralight-webfont.woff) format('woff'), url(../../fonts/proba_pro_extralight-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_extralight-webfont.eot) format('eot'), url(../../fonts/proba_pro_extralight-webfont.ttf) format('ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_light-webfont.woff) format('woff'), url(../../fonts/proba_pro_light-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_light-webfont.eot) format('eot'), url(../../fonts/proba_pro_light-webfont.ttf) format('ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_medium-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_medium-webfont.ttf) format('ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Proba Pro';
+  src: local('Proba Pro'), url(../../fonts/proba_pro_semibold-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_semibold-webfont.ttf) format('ttf');
+  font-weight: 600;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Proba Pro', sans-serif;
 }
 .app {
   height: 100vh;
@@ -14,6 +44,8 @@ body {
 form {
   padding: 35px 40px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
 }
 .form-title {
@@ -30,7 +62,4 @@ form {
   font-size: 13px;
   line-height: 16px;
   color: #8f8f8f;
-}
-.input-name {
-  border: 3px solid black;
 }

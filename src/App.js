@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './css/index.css';
+import './csssrc/less/index.css';
 
 import MessageForm from './components/MessageForm';
 
