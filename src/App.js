@@ -5,7 +5,7 @@ import './csssrc/less/index.css';
 import MessageForm from './components/MessageForm';
 
 const App = () => (
-  <div className="app">
+  <div>
     <MessageForm />
   </div>
 );

@@ -37,8 +37,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Proba Pro', sans-serif;
-}
-.app {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,16 +45,28 @@ body {
 form {
   margin: 10vh 0;
   padding: 35px 40px;
-  width: 335px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   text-align: center;
 }
+@media (min-width: 768px) {
+  form {
+    width: 630px;
+    text-align: left;
+  }
+}
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .input-field {
   position: relative;
   margin: 0 0 24px 0;
   text-align: left;
+}
+@media (min-width: 768px) {
 }
 label {
   position: absolute;
@@ -79,11 +89,30 @@ input {
   border-bottom: 1px solid #e2e2e2;
   outline: none;
 }
+@media (min-width: 768px) {
+  input {
+    width: 170px;
+  }
+}
 input:focus {
   border-bottom: 1px solid #4285f4;
 }
 input:invalid {
   border-bottom: 1px solid #ff4242;
+}
+textarea {
+  padding: 6px 0;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  outline: none;
+}
+@media (min-width: 768px) {
+  textarea {
+    width: 100%;
+  }
 }
 ::-webkit-input-placeholder {
   font-size: 18px;
@@ -117,6 +146,7 @@ input:invalid {
   opacity: 1;
 }
 .form-title {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 26px;
@@ -124,6 +154,7 @@ input:invalid {
   color: #333333;
 }
 .form-subtitle {
+  width: 100%;
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
@@ -142,6 +173,8 @@ input:invalid {
   background-color: #4285f4;
   border-radius: 4px;
   cursor: pointer;
+}
+@media (min-width: 768px) {
 }
 .btn:disabled {
   color: rgba(250, 250, 250, 0.5);

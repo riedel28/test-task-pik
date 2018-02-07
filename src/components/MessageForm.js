@@ -1,5 +1,8 @@
 import React from 'react';
+import Textarea from 'react-textarea-autosize';
+
 import { Field, reduxForm } from 'redux-form';
+
 import Button from './Button';
 
 const isCreditAllowed = num => {
@@ -52,7 +55,25 @@ const validate = values => {
   return errors;
 };
 
-const renderField = ({
+const renderTextarea = ({
+  input,
+  type,
+  label,
+  placeholder,
+  meta: {
+    touched, error, warning, dirty,
+  },
+}) => (
+  <div className="input-field">
+    {dirty && <label className="show">{label}</label>}
+    <Textarea {...input} type={type} placeholder={placeholder} />
+    {touched &&
+      ((error && <span className="error show">{error}</span>) ||
+        (warning && <span className="error show">{warning}</span>))}
+  </div>
+);
+
+const renderInput = ({
   input,
   type,
   label,
@@ -78,20 +99,28 @@ const MessageForm = props => {
     <form className="form" onSubmit={handleSubmit(submitValues)}>
       <h2 className="form-title">Отправить сообщение</h2>
       <p className="form-subtitle">Анонимные сообщения рассматриваются</p>
-      <Field label="Имя" type="text" name="name" component={renderField} placeholder="Имя" />
-      <Field label="Email" type="email" name="email" component={renderField} placeholder="Email" />
-      <Field
-        label="Дата рождения"
-        type="text"
-        name="birthdate"
-        component={renderField}
-        placeholder="Дата рождения"
-      />
+      <div className="inputs-container">
+        <Field label="Имя" type="text" name="name" component={renderInput} placeholder="Имя" />
+        <Field
+          label="Email"
+          type="email"
+          name="email"
+          component={renderInput}
+          placeholder="Email"
+        />
+        <Field
+          label="Дата рождения"
+          type="text"
+          name="birthdate"
+          component={renderInput}
+          placeholder="Дата рождения"
+        />
+      </div>
       <Field
         label="Сообщение"
         type="text"
         name="message"
-        component={renderField}
+        component={renderTextarea}
         placeholder="Сообщение"
       />
       <Button className="btn btn-clear" type="button" onClick={reset} disabled={pristine}>

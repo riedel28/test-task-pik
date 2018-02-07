@@ -1,17 +1,39 @@
 form {
   margin: 10vh 0;
   padding: 35px 40px;
-  width: 335px;
+  // width: 335px;
+  // width: 50%;
   display: flex;
   flex-direction: column;
+
   background-color: #ffffff;
   text-align: center;
+
+  @media (min-width: 768px) {
+    width: 630px;
+    text-align: left;
+    // justify-content: space-between;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+  }
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .input-field {
+  // width: 100%;
   position: relative;
   margin: 0 0 24px 0;
   text-align: left;
+
+  @media (min-width: 768px) {
+    // width: 100%;
+    // display: inline-block;
+  }
 }
 
 label {
@@ -35,6 +57,10 @@ input {
   border: 0;
   border-bottom: 1px solid #e2e2e2;
   outline: none;
+
+  @media (min-width: 768px) {
+    width: 170px;
+  }
 }
 
 input:focus {
@@ -43,6 +69,21 @@ input:focus {
 
 input:invalid {
   border-bottom: 1px solid #ff4242;
+}
+
+textarea {
+  padding: 6px 0;
+  font-family: 'Proba Pro', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  outline: none;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    // display: inline-block;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -84,6 +125,7 @@ input:invalid {
 }
 
 .form-title {
+  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 26px;
@@ -92,6 +134,7 @@ input:invalid {
 }
 
 .form-subtitle {
+  width: 100%;
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
@@ -111,6 +154,14 @@ input:invalid {
   background-color: #4285f4;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    // width: 28%;
+
+    // display: inline-flex;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
 }
 
 .btn:disabled {
