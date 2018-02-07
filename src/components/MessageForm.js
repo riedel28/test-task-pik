@@ -21,8 +21,6 @@ const isCreditAllowed = num => {
 
 const submitValues = values => {
   console.log(values);
-
-  console.log(isCreditAllowed(values.birthdate));
 };
 
 const validate = values => {
@@ -52,33 +50,36 @@ const validate = values => {
 };
 
 const renderInput = ({
-  input,
-  type,
-  label,
-  placeholder,
-  meta: {
-    touched, error, warning, dirty,
-  },
+  input, type, label, placeholder, meta: { touched, error, dirty },
 }) => (
   <div className="input-field">
     {dirty && <label className="show">{label}</label>}
     {label === 'Сообщение' ? (
-      <Textarea {...input} placeholder={placeholder} type={type} />
+      <Textarea
+        {...input}
+        placeholder={placeholder}
+        type={type}
+        className={touched && error ? 'input-error' : ''}
+      />
     ) : (
-      <input {...input} type={type} placeholder={placeholder} />
+      <input
+        {...input}
+        type={type}
+        placeholder={placeholder}
+        className={touched && error ? 'input-error' : ''}
+      />
     )}
-    {touched &&
-      ((error && <span className="error show">{error}</span>) ||
-        (warning && <span className="error show">{warning}</span>))}
+    {touched && (error && <span className="error-message">{error}</span>)}
   </div>
 );
 
 const MessageForm = props => {
   const {
-    handleSubmit, pristine, submitting, reset,
+    handleSubmit, pristine, submitting, reset, error,
   } = props;
   return (
     <form className="form" onSubmit={handleSubmit(submitValues)}>
+      {error && <span>error</span>}
       <h2 className="form-title">Отправить сообщение</h2>
       <p className="form-subtitle">Анонимные сообщения рассматриваются</p>
       <div className="inputs-container">

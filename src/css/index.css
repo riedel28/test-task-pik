@@ -63,6 +63,7 @@ form {
   margin: 0;
   margin-bottom: 4px;
   font-size: 26px;
+  font-weight: 400;
   line-height: 33px;
   color: #333333;
 }
@@ -72,6 +73,7 @@ form {
   margin: 0;
   margin-bottom: 50px;
   font-size: 13px;
+  font-weight: 300;
   line-height: 16px;
   color: #8f8f8f;
 }
@@ -100,7 +102,7 @@ label {
   left: 0;
   font-size: 12px;
   line-height: 22px;
-  font-weight: 400;
+  font-weight: 300;
   color: #8f8f8f;
   text-align: left;
 }
@@ -109,6 +111,7 @@ input {
   padding: 6px 0;
   font-family: 'Proba Pro', sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 22px;
   border: 0;
   border-bottom: 1px solid #e2e2e2;
@@ -125,6 +128,7 @@ textarea {
   padding: 6px 0;
   font-family: 'Proba Pro', sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 22px;
   border: none;
   overflow: auto;
@@ -135,29 +139,33 @@ textarea {
 textarea:focus {
   border-bottom: 1px solid #4285f4;
 }
-textarea:invalid {
+:invalid {
   border-bottom: 1px solid #ff4242;
 }
 ::-webkit-input-placeholder {
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 :-moz-placeholder {
   /* Firefox 18- */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
@@ -193,7 +201,7 @@ textarea:invalid {
   padding: 14px 64px;
   font-family: 'Proba Pro', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 22px;
   color: #fafafa;
   background-color: #4285f4;
