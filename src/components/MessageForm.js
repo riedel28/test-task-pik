@@ -1,8 +1,6 @@
 import React from 'react';
 import Textarea from 'react-textarea-autosize';
-
 import { Field, reduxForm } from 'redux-form';
-
 import Button from './Button';
 
 const isCreditAllowed = num => {
@@ -32,8 +30,6 @@ const validate = values => {
 
   const dateRegExp = '^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4})$';
 
-  if (!values.name) errors.name = 'Введите имя';
-
   if (!values.email) {
     errors.email = 'Введите email';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -55,24 +51,6 @@ const validate = values => {
   return errors;
 };
 
-const renderTextarea = ({
-  input,
-  type,
-  label,
-  placeholder,
-  meta: {
-    touched, error, warning, dirty,
-  },
-}) => (
-  <div className="input-field">
-    {dirty && <label className="show">{label}</label>}
-    <Textarea {...input} type={type} placeholder={placeholder} />
-    {touched &&
-      ((error && <span className="error show">{error}</span>) ||
-        (warning && <span className="error show">{warning}</span>))}
-  </div>
-);
-
 const renderInput = ({
   input,
   type,
@@ -84,7 +62,11 @@ const renderInput = ({
 }) => (
   <div className="input-field">
     {dirty && <label className="show">{label}</label>}
-    <input {...input} type={type} placeholder={placeholder} />
+    {label === 'Сообщение' ? (
+      <Textarea {...input} placeholder={placeholder} type={type} />
+    ) : (
+      <input {...input} type={type} placeholder={placeholder} />
+    )}
     {touched &&
       ((error && <span className="error show">{error}</span>) ||
         (warning && <span className="error show">{warning}</span>))}
@@ -120,15 +102,17 @@ const MessageForm = props => {
         label="Сообщение"
         type="text"
         name="message"
-        component={renderTextarea}
+        component={renderInput}
         placeholder="Сообщение"
       />
-      <Button className="btn btn-clear" type="button" onClick={reset} disabled={pristine}>
-        Очистить
-      </Button>
-      <Button className="btn" type="submit" disabled={pristine || submitting}>
-        Отправить
-      </Button>
+      <div className="btn-container">
+        <Button className="btn btn-clear" type="button" onClick={reset} disabled={pristine}>
+          Очистить
+        </Button>
+        <Button className="btn" type="submit" disabled={pristine || submitting}>
+          Отправить
+        </Button>
+      </div>
     </form>
   );
 };
