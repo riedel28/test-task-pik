@@ -1,31 +1,31 @@
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_regular-webfont.woff) format('woff'), url(../../fonts/proba_pro_regular-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_regular-webfont.eot) format('eot'), url(../../fonts/proba_pro_regular-webfont.ttf) format('ttf');
+  src: url(../../fonts/proba_pro_regular-webfont.woff) format('woff'), url(../../fonts/proba_pro_regular-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_regular-webfont.eot) format('eot'), url(../../fonts/proba_pro_regular-webfont.ttf) format('ttf');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_thin-webfont.woff) format('woff'), url(../../fonts/proba_pro_thin-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_thin-webfont.eot) format('eot'), url(../../fonts/proba_pro_thin-webfont.ttf) format('ttf');
+  src: url(../../fonts/proba_pro_thin-webfont.woff) format('woff'), url(../../fonts/proba_pro_thin-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_thin-webfont.eot) format('eot'), url(../../fonts/proba_pro_thin-webfont.ttf) format('ttf');
   font-weight: 200;
 }
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_extralight-webfont.woff) format('woff'), url(../../fonts/proba_pro_extralight-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_extralight-webfont.eot) format('eot'), url(../../fonts/proba_pro_extralight-webfont.ttf) format('ttf');
+  src: url(../../fonts/proba_pro_extralight-webfont.woff) format('woff'), url(../../fonts/proba_pro_extralight-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_extralight-webfont.eot) format('eot'), url(../../fonts/proba_pro_extralight-webfont.ttf) format('ttf');
   font-weight: 100;
 }
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_light-webfont.woff) format('woff'), url(../../fonts/proba_pro_light-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_light-webfont.eot) format('eot'), url(../../fonts/proba_pro_light-webfont.ttf) format('ttf');
+  src: url(../../fonts/proba_pro_light-webfont.woff) format('woff'), url(../../fonts/proba_pro_light-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_light-webfont.eot) format('eot'), url(../../fonts/proba_pro_light-webfont.ttf) format('ttf');
   font-weight: 300;
 }
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_medium-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_medium-webfont.ttf) format('ttf');
+  src: url(../../fonts/proba_pro_medium-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_medium-webfont.ttf) format('ttf');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Proba Pro';
-  src: local('Proba Pro'), url(../../fonts/proba_pro_semibold-webfont.woff) format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_semibold-webfont.ttf) format('ttf');
+  src: url('../../fonts/proba_pro_semibold-webfont.woff') format('woff'), url(../../fonts/proba_pro_medium-webfont.woff2) format('woff2'), url(../../fonts/proba_pro_medium-webfont.eot) format('eot'), url(../../fonts/proba_pro_semibold-webfont.ttf) format('ttf');
   font-weight: 600;
 }
 *,
@@ -34,12 +34,12 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Proba Pro', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Proba Pro', sans-serif;
   background-color: #f3f3f3;
 }
 form {
@@ -61,7 +61,9 @@ form {
   width: 100%;
   padding: 0;
   margin: 0;
+  margin-bottom: 4px;
   font-size: 26px;
+  font-weight: 400;
   line-height: 33px;
   color: #333333;
 }
@@ -71,6 +73,7 @@ form {
   margin: 0;
   margin-bottom: 50px;
   font-size: 13px;
+  font-weight: 300;
   line-height: 16px;
   color: #8f8f8f;
 }
@@ -90,7 +93,7 @@ form {
 }
 @media (min-width: 768px) {
   .input-field input {
-    width: 175px;
+    width: 173px;
   }
 }
 label {
@@ -98,6 +101,7 @@ label {
   top: -18px;
   left: 0;
   font-size: 12px;
+  font-weight: 500;
   line-height: 22px;
   font-weight: 400;
   color: #8f8f8f;
@@ -108,6 +112,7 @@ input {
   padding: 6px 0;
   font-family: 'Proba Pro', sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 22px;
   border: 0;
   border-bottom: 1px solid #e2e2e2;
@@ -124,6 +129,7 @@ textarea {
   padding: 6px 0;
   font-family: 'Proba Pro', sans-serif;
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   border: none;
   overflow: auto;
@@ -139,24 +145,28 @@ textarea:invalid {
 }
 ::-webkit-input-placeholder {
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
 :-moz-placeholder {
   /* Firefox 18- */
   font-size: 18px;
+  font-weight: 300;
   line-height: 22px;
   color: #8f8f8f;
 }
@@ -170,7 +180,7 @@ textarea:invalid {
 }
 @media (min-width: 768px) {
   .error {
-    width: 175px;
+    width: 173px;
   }
 }
 .show {
@@ -192,7 +202,7 @@ textarea:invalid {
   padding: 14px 64px;
   font-family: 'Proba Pro', sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 22px;
   color: #fafafa;
   background-color: #4285f4;

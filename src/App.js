@@ -4,11 +4,7 @@ import './csssrc/less/index.css';
 
 import MessageForm from './components/MessageForm';
 
-const App = () => (
-  <div>
-    <MessageForm />
-  </div>
-);
+const App = () => <MessageForm />;
 
 const mapStateToProps = state => ({
   form: state.form,

@@ -12,7 +12,7 @@ const isCreditAllowed = num => {
   const maxAge = presentYear - 74;
   const minAge = presentYear - 18;
 
-  if (year > maxAge && year <= minAge) {
+  if (year >= maxAge && year <= minAge) {
     return true;
   }
 
