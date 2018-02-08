@@ -170,7 +170,7 @@ textarea:invalid {
   color: #8f8f8f;
 }
 .error-message {
-  margin-top: 5px;
+  margin-top: 4px;
   width: 100%;
   font-size: 10px;
   line-height: 12px;
@@ -184,6 +184,9 @@ textarea:invalid {
 }
 .show {
   opacity: 1;
+}
+.submit-message {
+  text-align: center;
 }
 .btn-container {
   display: flex;
@@ -207,6 +210,7 @@ textarea:invalid {
   background-color: #4285f4;
   border-radius: 4px;
   cursor: pointer;
+  border: 0;
 }
 .btn:disabled {
   color: rgba(250, 250, 250, 0.5);

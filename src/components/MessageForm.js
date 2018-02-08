@@ -75,11 +75,10 @@ const renderInput = ({
 
 const MessageForm = props => {
   const {
-    handleSubmit, pristine, submitting, reset, error,
+    handleSubmit, pristine, submitting, reset, submitSucceeded,
   } = props;
   return (
     <form className="form" onSubmit={handleSubmit(submitValues)}>
-      {error && <span>error</span>}
       <h2 className="form-title">Отправить сообщение</h2>
       <p className="form-subtitle">Анонимные сообщения рассматриваются</p>
       <div className="inputs-container">
@@ -106,6 +105,7 @@ const MessageForm = props => {
         component={renderInput}
         placeholder="Сообщение"
       />
+      {submitSucceeded && <p className="submit-message">Сообщение отправлено!</p>}
       <div className="btn-container">
         <Button className="btn btn-clear" type="button" onClick={reset} disabled={pristine}>
           Очистить
