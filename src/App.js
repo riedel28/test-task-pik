@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import './csssrc/less/index.css';
 
-class App extends Component {
-  render() {
-    return <div className="App">Hello</div>;
-  }
-}
+import MessageForm from './components/MessageForm';
 
-export default App;
+const App = () => <MessageForm />;
+
+const mapStateToProps = state => ({
+  form: state.form,
+});
+
+export default connect(mapStateToProps)(App);
